@@ -21,7 +21,7 @@ public:
             if (!transform)
                 return;
 
-            Helper::Methods::set_position(transform, Helper::Methods::ScreenToWorldPoint(Helper::Methods::get_current(), { mousePos.x, (ScreenSize.y) - mousePos.y, 0 }));
+            transform->SetPosition(Helper::Methods::ScreenToWorldPoint(Helper::Methods::get_current(), { mousePos.x, (ScreenSize.y) - mousePos.y, 0 }));
         }
         return;
     }

@@ -100,7 +100,7 @@ HOOK_FUNC(void, InnerNetClient_Update, uintptr_t inst, void* method)  {
                     Helper::Var::needback -= 1;
                     Helper::Methods::set_position(transform, Helper::Var::Position_local);
                 }
-                auto position = Helper::Methods::get_position(transform);
+                auto position = transform->GetPosition();
                 unity::vector onscreen = Helper::Methods::WorldToScreenPoint(Helper::Methods::get_current(), position);
                 Helper::Var::OnScreen_local = { onscreen.x, ScreenSize.y - onscreen.y };
                 Helper::Var::Position_local = position;
@@ -254,7 +254,7 @@ HOOK_FUNC(void, CmdCheckMurder, uintptr_t inst, uintptr_t target) {
     return old_CmdCheckMurder(inst, target);
 }
 
-HOOK_FUNC(float , ShipStatus_CalculateLightRadius, uintptr_t inst, uintptr_t player) {
+HOOK_FUNC(float, ShipStatus_CalculateLightRadius, uintptr_t inst, uintptr_t player) {
     if (Helper::Var::LocalPlayer) {
         if (Helper::Methods::get_Data(Helper::Var::LocalPlayer) == player && UI::no_shadow) {
             return 10000;
@@ -262,7 +262,7 @@ HOOK_FUNC(float , ShipStatus_CalculateLightRadius, uintptr_t inst, uintptr_t pla
     }
 
     return old_ShipStatus_CalculateLightRadius(inst, player);
-}
+} 
 namespace hooks {
     
     void Init() {

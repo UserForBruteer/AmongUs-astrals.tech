@@ -12,8 +12,7 @@
 #include <cmath>
 
 struct KillFeedEntry {
-    std::string killer;
-    std::string victim;
+    std::string killer, victim;
     float time;
 };
 
@@ -21,22 +20,12 @@ static std::vector<KillFeedEntry> killFeed;
 static std::unordered_set<std::string> victimsInFeed;
 static std::unordered_map<std::string, bool> wasDead;
 
-static void AddKillFeed(const std::string& killerName, const std::string& victimName) {
-    if (UI::event_notification) {
-        if (victimsInFeed.count(victimName))
-            return;
-
-        KillFeedEntry e;
-        e.killer = killerName.empty() ? std::string("Unknown") : killerName;
-        e.victim = victimName;
-        e.time = (float)ImGui::GetTime();
-
-        killFeed.push_back(e);
-        victimsInFeed.insert(victimName);
-        NotificationSystem_class->push(
-            std::string("<color=#FF0000>") + e.killer + " <color=#FFFFFF>killed <color=#FF0000>" + e.victim + "", 10, 1
-        );
-    }
+static void AddKillFeed(const std::string& killer, const std::string& victim) {
+    if (!UI::event_notification || victimsInFeed.count(victim)) return;
+    KillFeedEntry e{ killer.empty() ? "Unknown" : killer, victim, (float)ImGui::GetTime() };
+    killFeed.push_back(e);
+    victimsInFeed.insert(victim);
+    NotificationSystem_class->push("<color=#FF0000>" + e.killer + " <color=#FFFFFF>killed <color=#FF0000>" + e.victim, 10, 1);
 }
 
 class esp {
@@ -44,175 +33,109 @@ public:
     rolehack* rolehack_class = new rolehack();
     void draw() {
         static float angle = 0.0f;
-        ImVec2 ScreenSize = ImGui::GetIO().DisplaySize;
-        float dist = FLT_MAX;
-        unity::vector closest = Helper::Var::Position_local;
-        uintptr_t var_closest = Helper::Var::LocalPlayer;
-        for (size_t i{}; i < Helper::Var::NetworkedPlayerInfo_list.size(); i++) {
-            const auto& NetworkedPlayerInfo = Helper::Var::NetworkedPlayerInfo_list[i];
-            if (!NetworkedPlayerInfo)
-                continue;
+        ImVec2 screenSize = ImGui::GetIO().DisplaySize;
+        float minDist = FLT_MAX;
+        unity::vector closestPos = Helper::Var::Position_local;
+        uintptr_t closestObj = Helper::Var::LocalPlayer;
 
-            if (!Helper::Var::LocalPlayer || !Helper::Methods::IsNativeObjectAlive(NetworkedPlayerInfo))
-                continue;
+        for (auto& info : Helper::Var::NetworkedPlayerInfo_list) {
+            if (!info || !Helper::Var::LocalPlayer || !Helper::Methods::IsNativeObjectAlive(info) || *(bool*)(info + 0x48)) continue;
 
-            if (*(bool*)(NetworkedPlayerInfo + 0x48))
-                continue;
+            auto name_sys = Helper::Methods::get_PlayerName(info);
+            std::string playerName = (name_sys && name_sys->fields._stringLength > 0)
+                ? utf16_to_utf8((wchar_t*)&name_sys->fields._firstChar, name_sys->fields._stringLength) : "";
 
-            System_String_o* name_sys = Helper::Methods::get_PlayerName(NetworkedPlayerInfo);
-            std::string playerName;
-            if (name_sys && name_sys->fields._stringLength > 0) {
-                playerName = utf16_to_utf8(
-                    reinterpret_cast<const wchar_t*>(&name_sys->fields._firstChar),
-                    name_sys->fields._stringLength
-                );
-            }
+            bool isDead = *(bool*)(info + 0x54);
+            uintptr_t obj = *(uintptr_t*)(info + 0x58);
+            if (!obj || !Helper::Methods::IsNativeObjectAlive(obj)) continue;
 
-            bool isDead = *(bool*)(NetworkedPlayerInfo + 0x54);
-
-            uintptr_t _object = *reinterpret_cast<uintptr_t*>(NetworkedPlayerInfo + 0x58);
-            if (!_object || !Helper::Methods::IsNativeObjectAlive(_object))
-                continue;
-
-            if (_object == Helper::Var::LocalPlayer) {
-                if (UI::imp) {
-                    *reinterpret_cast<RoleTypes*>(NetworkedPlayerInfo + 0x38) = RoleTypes::Engineer;
-                    auto kal = *reinterpret_cast<uintptr_t*>(NetworkedPlayerInfo + 0x4C);
-                    if (kal) {
-                        *reinterpret_cast<bool*>(kal + 0x43) = true;
-                        Helper::Methods::RpcSetRole(_object, RoleTypes::Engineer, true);
-                    }
+            if (obj == Helper::Var::LocalPlayer && UI::imp) {
+                *(RoleTypes*)(info + 0x38) = RoleTypes::Engineer;
+                if (auto kal = *(uintptr_t*)(info + 0x4C)) {
+                    *(bool*)(kal + 0x43) = true;
+                    Helper::Methods::RpcSetRole(obj, RoleTypes::Engineer, true);
                 }
             }
 
-            bool previouslyDead = false;
-            auto itW = wasDead.find(playerName);
-            if (itW != wasDead.end()) previouslyDead = itW->second;
-
+            bool previouslyDead = wasDead[playerName];
             if (isDead && !previouslyDead) {
                 auto impostors = rolehack_class->getImpostorControl();
                 uintptr_t nearestImp = 0;
-                float minDist = INFINITY;
+                float impDist = INFINITY;
                 for (auto imp : impostors) {
-                    auto impTrans = Helper::Methods::get_transform(imp);
-                    if (!impTrans) continue;
-                    float d = unity::vector::Distance(
-                        Helper::Methods::get_position(impTrans),
-                        Helper::Methods::get_position(Helper::Methods::get_transform(_object))
-                    );
-                    if (d < minDist) {
-                        minDist = d;
-                        nearestImp = imp;
+                    if (auto impT = Helper::Methods::get_transform(imp)) {
+                        float d = unity::vector::Distance(impT->GetPosition(), Helper::Methods::get_transform(obj)->GetPosition());
+                        if (d < impDist) { impDist = d; nearestImp = imp; }
                     }
                 }
-                std::string killerName = "Unknown";
+                std::string killer = "Unknown";
                 if (nearestImp) {
-                    for (size_t j = 0; j < Helper::Var::NetworkedPlayerInfo_list.size(); ++j) {
-                        const auto& otherInfo = Helper::Var::NetworkedPlayerInfo_list[j];
-                        if (!otherInfo) continue;
-                        uintptr_t otherObj = *reinterpret_cast<uintptr_t*>(otherInfo + 0x58);
-                        if (otherObj == nearestImp) {
-                            System_String_o* ksys = Helper::Methods::get_PlayerName(otherInfo);
-                            if (ksys && ksys->fields._stringLength > 0) {
-                                killerName = utf16_to_utf8(
-                                    reinterpret_cast<const wchar_t*>(&ksys->fields._firstChar),
-                                    ksys->fields._stringLength
-                                );
-                            }
+                    for (auto& other : Helper::Var::NetworkedPlayerInfo_list) {
+                        if (!other) continue;
+                        if (*(uintptr_t*)(other + 0x58) == nearestImp) {
+                            auto ksys = Helper::Methods::get_PlayerName(other);
+                            if (ksys && ksys->fields._stringLength > 0)
+                                killer = utf16_to_utf8((wchar_t*)&ksys->fields._firstChar, ksys->fields._stringLength);
                             break;
                         }
                     }
                 }
-
-                if (_object == Helper::Var::LocalPlayer && playerName.empty()) {
-                    playerName = std::string("You");
-                }
-
-                AddKillFeed(killerName, playerName);
+                if (obj == Helper::Var::LocalPlayer && playerName.empty()) playerName = "You";
+                AddKillFeed(killer, playerName);
             }
-            if (!isDead) {
-                if (victimsInFeed.count(playerName)) {
-                    victimsInFeed.erase(playerName);
-                }
-            }
+
+            if (!isDead) victimsInFeed.erase(playerName);
             wasDead[playerName] = isDead;
-            if (Helper::Var::LocalPlayer == _object)
-                continue;
-            std::vector<std::string> imp = rolehack_class->getImpostorNames();
-            auto it = std::find(imp.begin(), imp.end(), playerName);
+            if (obj == Helper::Var::LocalPlayer) continue;
 
-            auto transform = Helper::Methods::get_transform(_object);
-            if (!transform)
-                continue;
+            auto impostorNames = rolehack_class->getImpostorNames();
+            bool isImp = std::find(impostorNames.begin(), impostorNames.end(), playerName) != impostorNames.end();
 
-            
-            auto position = Helper::Methods::get_position(transform);
-            float _objdist = unity::vector::Distance(Helper::Var::Position_local, position);
-            if (!*(bool*)(NetworkedPlayerInfo + 0x54)) {
-                
+            auto transform = Helper::Methods::get_transform(obj);
+            if (!transform) continue;
 
-                if (it == imp.end()) {
-                    if (dist > _objdist) {
-                        dist = _objdist;
-                        closest = position;
-                        var_closest = _object;
-                    }
-                }
-            }
-            unity::vector onscreen = Helper::Methods::WorldToScreenPoint(Helper::Methods::get_current(), position);
-            ImVec2 start = Helper::Var::OnScreen_local;
-            ImVec2 end = { onscreen.x, ScreenSize.y - onscreen.y };
-
-            if (it != imp.end()) {
-                if (*(bool*)(NetworkedPlayerInfo + 0x54)) {
-                    ImGui::GetBackgroundDrawList()->AddLine(start, end, ImColor(255, 0, 0, 122));
-                }
-                else {
-                    ImGui::GetBackgroundDrawList()->AddLine(start, end, ImColor(255, 0, 0, 255));
-                }
-            }
-            else {
-                if (*(bool*)(NetworkedPlayerInfo + 0x54)) {
-                    ImGui::GetBackgroundDrawList()->AddLine(start, end, ImColor(255, 255, 255, 122));
-                }
-                else {
-                    ImGui::GetBackgroundDrawList()->AddLine(start, end, ImColor(255, 255, 255, 255));
-                }
+            auto pos = transform->GetPosition();
+            float objDist = unity::vector::Distance(Helper::Var::Position_local, pos);
+            if (!isDead && !isImp && objDist < minDist) {
+                minDist = objDist;
+                closestPos = pos;
+                closestObj = obj;
             }
 
-            ImVec2 center = { (start.x + end.x) * 0.5f, (start.y + end.y) * 0.5f };
+            auto rightTop = pos + unity::vector(transform->GetRight().x * transform->get_localScale().x / 2,
+                transform->GetUp().y * transform->get_localScale().y / 2, 0);
+            auto leftBottom = pos - unity::vector(transform->GetRight().x * transform->get_localScale().x / 2,
+                transform->GetUp().y * transform->get_localScale().y / 2, 0);
 
-            float dx = end.x - start.x;
-            float dy = end.y - start.y;
-            float angle = std::atan2(dy, dx);
+            auto rt_screen = Helper::Methods::WorldToScreenPoint(Helper::Methods::get_current(), rightTop);
+            auto lb_screen = Helper::Methods::WorldToScreenPoint(Helper::Methods::get_current(), leftBottom);
+            auto start = Helper::Var::OnScreen_local;
+            auto end = ImVec2(Helper::Methods::WorldToScreenPoint(Helper::Methods::get_current(), pos).x,
+                screenSize.y - lb_screen.y);
 
-            char dist_str[32];
-            std::snprintf(dist_str, sizeof(dist_str), "%.2fm", _objdist);
+            ImColor col = isImp ? ImColor(255, 0, 0) : ImColor(255, 255, 255);
+            ImColor bgCol = isDead ? ImColor(0, 0, 0, 50) : ImColor(0, 0, 0);
+            int alpha = isDead ? 50 : 255;
+            ImGui::GetBackgroundDrawList()->AddLine(start, end, ImColor((int)col.Value.x * 255, (int)col.Value.y * 255, (int)col.Value.z * 255, alpha));
+            ImGui::GetBackgroundDrawList()->AddRect(ImVec2(rt_screen.x, screenSize.y - rt_screen.y),
+                ImVec2(lb_screen.x, screenSize.y - lb_screen.y),
+                bgCol, 0, 15, 3);
+            ImGui::GetBackgroundDrawList()->AddRect(ImVec2(rt_screen.x, screenSize.y - rt_screen.y),
+                ImVec2(lb_screen.x, screenSize.y - lb_screen.y),
+                ImColor((int)col.Value.x * 255, (int)col.Value.y * 255, (int)col.Value.z * 255, isDead ? 15 : 255));
 
+            ImVec2 center{ (start.x + end.x) * 0.5f, (start.y + end.y) * 0.5f };
+            char dist_str[32]; std::snprintf(dist_str, sizeof(dist_str), "%.2fm", objDist);
             Helper::Methods::AddText(ImGui::GetFont(), ImGui::GetFontSize(), true, true, center, ImColor(255, 255, 255), dist_str);
         }
 
-        Helper::Var::closest = var_closest;
-        if (dist <= Helper::Var::dist_attack && UI::target_strafe) {
+        Helper::Var::closest = closestObj;
+        if (minDist <= Helper::Var::dist_attack && UI::target_strafe) {
             float radius = Helper::Var::dist_attack - 0.1f;
-            
-            unity::vector offset;
-            angle += 2;
-            if (angle == 360)
-                angle = 0;
-            offset.x = std::cos(angle) * radius;
-            offset.y = std::sin(angle) * radius;
-            offset.z = Helper::Var::Position_local.z;
-
-            unity::vector around = closest + offset;
-            unity::vector direction_to_destination = around - Helper::Var::Position_local;
-            float distance_to_destination = direction_to_destination.magnitude();
-            auto norm = unity::vector::Normalize(closest - around);
-            bool target_is_visible = Helper::Methods::Raycast({ closest.x, closest.y }, {norm.x, norm.y}, unity::vector::Distance(around, closest), Helper::Methods::NameToLayer(Helper::Methods::unity_string_new("Players"))).m_Collider == 0;
-
-            if (target_is_visible) {
-                Helper::Methods::set_position(Helper::Methods::get_transform(Helper::Var::LocalPlayer), around);
-            }
+            angle = fmod(angle + 2, 360.0f);
+            unity::vector offset{ std::cos(angle) * radius, std::sin(angle) * radius, Helper::Var::Position_local.z };
+            unity::vector around = closestPos + offset;
+            Helper::Methods::get_transform(Helper::Var::LocalPlayer)->SetPosition(around);
         }
-    };
+    }
 };

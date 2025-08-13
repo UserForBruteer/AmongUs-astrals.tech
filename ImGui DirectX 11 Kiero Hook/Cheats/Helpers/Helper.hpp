@@ -12,6 +12,8 @@
 #include "../il2cpp/il2cpp.h"
 #include <string>
 
+class Transform;
+
 static inline ImVec2  operator*(const ImVec2& lhs, const float rhs) { return ImVec2(lhs.x * rhs, lhs.y * rhs); }
 static inline ImVec2  operator/(const ImVec2& lhs, const float rhs) { return ImVec2(lhs.x / rhs, lhs.y / rhs); }
 static inline ImVec2  operator+(const ImVec2& lhs, const float rhs) { return ImVec2(lhs.x + rhs, lhs.y + rhs); }
@@ -52,9 +54,9 @@ namespace Helper {
 	namespace Methods {
 		unity::vector(*WorldToScreenPoint)(uintptr_t, unity::vector);
 		unity::vector(*ScreenToWorldPoint)(uintptr_t, unity::vector);
-		uintptr_t(*get_transform)(uintptr_t);
-		unity::vector(*get_position)(uintptr_t);
-		void(*set_position)(uintptr_t, unity::vector);
+		Transform*(*get_transform)(uintptr_t);
+		unity::vector(*get_position)(Transform*);
+		void(*set_position)(Transform*, unity::vector);
 		uintptr_t(*get_current)();
 		RaycastHit2D(*Raycast)(ImVec2, ImVec2, float, int);
 		uintptr_t(*get_Data)(uintptr_t);
@@ -80,12 +82,17 @@ namespace Helper {
 		bool(*Object_op_Implicit)(uintptr_t);
 		void(*RpcCompleteTask)(uintptr_t, uint);
 		void(*RpcSetScanner)(uintptr_t, bool);
+		unity::vector(*get_right)(Transform*);
+		unity::vector(*get_up)(Transform*);
+		Transform*(*GetChild)(Transform*, int);
+		Transform*(*get_parent)(Transform*);
+		unity::vector(*get_localScale)(Transform*);
 		inline void init() {
 			WorldToScreenPoint = reinterpret_cast<unity::vector(*) (uintptr_t, unity::vector)>(Helper::Var::gameAssembly + 0x1EBF710);
 			ScreenToWorldPoint = reinterpret_cast<unity::vector(*) (uintptr_t, unity::vector)>(Helper::Var::gameAssembly + 0x1EBEDB0);
-			get_transform = reinterpret_cast<uintptr_t(*) (uintptr_t)>(Helper::Var::gameAssembly + 0x1EEF390);
-			get_position = reinterpret_cast<unity::vector(*) (uintptr_t)>(Helper::Var::gameAssembly + 0x1F037C0);
-			set_position = reinterpret_cast<void(*) (uintptr_t, unity::vector)>(Helper::Var::gameAssembly + 0x1F03DF0);
+			get_transform = reinterpret_cast<Transform*(*) (uintptr_t)>(Helper::Var::gameAssembly + 0x1EEF390);
+			get_position = reinterpret_cast<unity::vector(*) (Transform*)>(Helper::Var::gameAssembly + 0x1F037C0);
+			set_position = reinterpret_cast<void(*) (Transform*, unity::vector)>(Helper::Var::gameAssembly + 0x1F03DF0);
 			get_current = reinterpret_cast<uintptr_t(*) ()>(Helper::Var::gameAssembly + 0x1EBFDC0);
 			Raycast = reinterpret_cast<RaycastHit2D(*) (ImVec2, ImVec2, float, int)>(Helper::Var::gameAssembly + 0x1F3ADA0);
 			get_Data = reinterpret_cast<uintptr_t(*) (uintptr_t)>(Helper::Var::gameAssembly + 0x5612D0);
@@ -110,6 +117,11 @@ namespace Helper {
 			Object_op_Implicit = reinterpret_cast<bool(*) (uintptr_t)>(Helper::Var::gameAssembly + 0x1EF6140);
 			RpcCompleteTask = reinterpret_cast<void(*) (uintptr_t, uint)>(Helper::Var::gameAssembly + 0x55C4E0);
 			RpcSetScanner = reinterpret_cast<void(*) (uintptr_t, bool)>(Helper::Var::gameAssembly + 0x55D330);
+			get_right = reinterpret_cast<unity::vector(*) (Transform*)>(Helper::Var::gameAssembly + 0x1F03800);
+			get_up = reinterpret_cast<unity::vector(*) (Transform*)>(Helper::Var::gameAssembly + 0x1F03920);
+			GetChild = reinterpret_cast<Transform*(*) (Transform*, int)>(Helper::Var::gameAssembly + 0x1F004D0);
+			get_parent = reinterpret_cast<Transform*(*) (Transform*)>(Helper::Var::gameAssembly + 0x1F00600);
+			get_localScale = reinterpret_cast<unity::vector(*) (Transform*)>(Helper::Var::gameAssembly + 0x1F03670);
 		}
 
 		inline ImVec2 flooring(ImVec2 vec) {
@@ -222,4 +234,47 @@ namespace Helper {
 			return "Unknown";
 		};
 	};
+};
+
+class Transform {
+public:
+	uintptr_t GetPointer() {
+		return (uintptr_t)this;
+	}
+
+	unity::vector GetPosition() {
+		return Helper::Methods::get_position(this);
+	}
+
+	void SetPosition(unity::vector pos) {
+		Helper::Methods::set_position(this, pos);
+	}
+
+	unity::vector GetRight() {
+		return Helper::Methods::get_right(this);
+	}
+
+	unity::vector GetUp() {
+		return Helper::Methods::get_up(this);
+	}
+
+	unity::vector get_localScale() {
+		return Helper::Methods::get_localScale(this);
+	}
+
+	Transform* GetChild(int index) {
+		return Helper::Methods::GetChild(this, index);
+	}
+
+	Transform* GetParent() {
+		return Helper::Methods::get_parent(this);
+	}
+
+	inline bool operator==(Transform& rhs) {
+		return this->GetPointer() == rhs.GetPointer();
+	}
+
+	inline bool operator!=(Transform& rhs) {
+		return this->GetPointer() != rhs.GetPointer();
+	}
 };

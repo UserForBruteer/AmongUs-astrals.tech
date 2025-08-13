@@ -1,6 +1,8 @@
 #pragma once
 #include "../../includes.h" 
 #include <string>
+#include "Helper.hpp"
+
 struct RaycastHit2D {
 	ImVec2 m_Centroid; // 0x0
 	ImVec2 m_Point; // 0x8
@@ -74,4 +76,3 @@ const std::vector<std::string> SystemTypeNames = {
     "RecRoom", "Lookout", "Beach", "Highlands", "Jungle", "SleepingQuarters",
     "MushroomMixupSabotage", "HeliSabotage"
 };
-
