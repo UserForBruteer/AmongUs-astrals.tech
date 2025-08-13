@@ -1,0 +1,13 @@
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\imgui\imgui.cpp;E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Release\imgui.obj
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\imgui\imgui_demo.cpp;E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Release\imgui_demo.obj
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\imgui\imgui_draw.cpp;E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Release\imgui_draw.obj
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\imgui\imgui_impl_dx11.cpp;E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Release\imgui_impl_dx11.obj
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\imgui\imgui_impl_win32.cpp;E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Release\imgui_impl_win32.obj
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\imgui\imgui_widgets.cpp;E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Release\imgui_widgets.obj
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\kiero\kiero.cpp;E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Release\kiero.obj
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\kiero\minhook\src\buffer.c;E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Release\buffer.obj
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\kiero\minhook\src\hde\hde32.c;E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Release\hde32.obj
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\kiero\minhook\src\hde\hde64.c;E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Release\hde64.obj
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\kiero\minhook\src\hook.c;E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Release\hook.obj
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\kiero\minhook\src\trampoline.c;E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Release\trampoline.obj
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\main.cpp;E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Release\main.obj

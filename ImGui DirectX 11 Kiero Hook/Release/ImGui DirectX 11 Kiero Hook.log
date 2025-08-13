@@ -1,0 +1,857 @@
+﻿  main.cpp
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(12,9): warning C4005: DXGI_STATUS_OCCLUDED: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(58984,9):
+      см. предыдущее определение "DXGI_STATUS_OCCLUDED"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(13,9): warning C4005: DXGI_STATUS_CLIPPED: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(58993,9):
+      см. предыдущее определение "DXGI_STATUS_CLIPPED"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(14,9): warning C4005: DXGI_STATUS_NO_REDIRECTION: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59002,9):
+      см. предыдущее определение "DXGI_STATUS_NO_REDIRECTION"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(15,9): warning C4005: DXGI_STATUS_NO_DESKTOP_ACCESS: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59011,9):
+      см. предыдущее определение "DXGI_STATUS_NO_DESKTOP_ACCESS"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(16,9): warning C4005: DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59020,9):
+      см. предыдущее определение "DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(17,9): warning C4005: DXGI_STATUS_MODE_CHANGED: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59029,9):
+      см. предыдущее определение "DXGI_STATUS_MODE_CHANGED"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(18,9): warning C4005: DXGI_STATUS_MODE_CHANGE_IN_PROGRESS: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59038,9):
+      см. предыдущее определение "DXGI_STATUS_MODE_CHANGE_IN_PROGRESS"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(21,9): warning C4005: DXGI_ERROR_INVALID_CALL: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59053,9):
+      см. предыдущее определение "DXGI_ERROR_INVALID_CALL"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(22,9): warning C4005: DXGI_ERROR_NOT_FOUND: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59062,9):
+      см. предыдущее определение "DXGI_ERROR_NOT_FOUND"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(23,9): warning C4005: DXGI_ERROR_MORE_DATA: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59071,9):
+      см. предыдущее определение "DXGI_ERROR_MORE_DATA"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(24,9): warning C4005: DXGI_ERROR_UNSUPPORTED: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59080,9):
+      см. предыдущее определение "DXGI_ERROR_UNSUPPORTED"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(25,9): warning C4005: DXGI_ERROR_DEVICE_REMOVED: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59089,9):
+      см. предыдущее определение "DXGI_ERROR_DEVICE_REMOVED"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(26,9): warning C4005: DXGI_ERROR_DEVICE_HUNG: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59098,9):
+      см. предыдущее определение "DXGI_ERROR_DEVICE_HUNG"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(27,9): warning C4005: DXGI_ERROR_DEVICE_RESET: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59108,9):
+      см. предыдущее определение "DXGI_ERROR_DEVICE_RESET"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(28,9): warning C4005: DXGI_ERROR_WAS_STILL_DRAWING: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59117,9):
+      см. предыдущее определение "DXGI_ERROR_WAS_STILL_DRAWING"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(29,9): warning C4005: DXGI_ERROR_FRAME_STATISTICS_DISJOINT: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59127,9):
+      см. предыдущее определение "DXGI_ERROR_FRAME_STATISTICS_DISJOINT"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(30,9): warning C4005: DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59136,9):
+      см. предыдущее определение "DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(31,9): warning C4005: DXGI_ERROR_DRIVER_INTERNAL_ERROR: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59146,9):
+      см. предыдущее определение "DXGI_ERROR_DRIVER_INTERNAL_ERROR"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(32,9): warning C4005: DXGI_ERROR_NONEXCLUSIVE: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59155,9):
+      см. предыдущее определение "DXGI_ERROR_NONEXCLUSIVE"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(33,9): warning C4005: DXGI_ERROR_NOT_CURRENTLY_AVAILABLE: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59164,9):
+      см. предыдущее определение "DXGI_ERROR_NOT_CURRENTLY_AVAILABLE"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(34,9): warning C4005: DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59174,9):
+      см. предыдущее определение "DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(35,9): warning C4005: DXGI_ERROR_REMOTE_OUTOFMEMORY: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59183,9):
+      см. предыдущее определение "DXGI_ERROR_REMOTE_OUTOFMEMORY"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(917,9): warning C4005: D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59498,9):
+      см. предыдущее определение "D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(918,9): warning C4005: D3D11_ERROR_FILE_NOT_FOUND: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59507,9):
+      см. предыдущее определение "D3D11_ERROR_FILE_NOT_FOUND"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(919,9): warning C4005: D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59517,9):
+      см. предыдущее определение "D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(920,9): warning C4005: D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59526,9):
+      см. предыдущее определение "D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d10.h(608,9): warning C4005: D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59474,9):
+      см. предыдущее определение "D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS"
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d10.h(609,9): warning C4005: D3D10_ERROR_FILE_NOT_FOUND: изменение макроопределения
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winerror.h(59483,9):
+      см. предыдущее определение "D3D10_ERROR_FILE_NOT_FOUND"
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\Helpers\vector.hxx(78,17): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\Helpers\vector.hxx(79,17): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\Helpers\vector.hxx(162,78): warning C4305: аргумент: усечение из "double" в "float"
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\Helpers\vector.hxx(162,72): warning C4305: аргумент: усечение из "double" в "float"
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\Helpers\vector.hxx(162,66): warning C4305: аргумент: усечение из "double" в "float"
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\Helpers\vector.hxx(185,19): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\Helpers\vector.hxx(186,19): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\Helpers\vector.hxx(196,17): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\Helpers\vector.hxx(197,17): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\Helpers\mono\string.hxx(59,16): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении)
+  (компиляция исходного файла "main.cpp")
+      E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\Helpers\mono\string.hxx(59,16):
+      Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(7397,29): warning C4359: PS4CDNCache_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(7432,29): warning C4359: SwitchCDNCache_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(16698,29): warning C4359: ProgressionScreen__AnimateXpAndLevelUp_d__15_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(16728,29): warning C4359: ProgressionScreen__AnimateXpBarFill_d__16_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(26770,29): warning C4359: FriendsListManager_PlatformFriend_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(32319,29): warning C4359: PlatformSpecificData_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(35369,29): warning C4359: AmongUsClient__CoStartGameClient_d__30_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(35402,29): warning C4359: AmongUsClient__CoStartGameHost_d__28_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(37369,29): warning C4359: HttpMatchmakerManager_MatchmakerError_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(40172,29): warning C4359: MatchmakerTokenPayload_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(55963,29): warning C4359: RefreshTimer_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(68547,29): warning C4359: Rewired_Demos_CustomPlatform_UnityInputJoystickSource_Joystick_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(68584,29): warning C4359: Rewired_Demos_CustomPlatform_UnityInputJoystickSource_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(69634,29): warning C4359: InnerNet_GameFilterOptions_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(72411,29): warning C4359: GooglePlayGames_BasicApi_Events_Event_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(78847,29): warning C4359: AmongUs_HTTP_RetryableWebRequest_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(89049,29): warning C4359: System_TimeZoneInfo_OffsetAndRule_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(89158,29): warning C4359: System_TimeZoneInfo_AdjustmentRule_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(89213,29): warning C4359: System_TimeZoneInfo_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(96360,29): warning C4359: System_LocalDataStoreElement_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(96404,29): warning C4359: System_LocalDataStoreSlot_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(96427,29): warning C4359: System_LocalDataStoreMgr_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(102829,29): warning C4359: System_Threading_Timer_Scheduler_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(110836,29): warning C4359: System_Security_Cryptography_SHA1Internal_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(111039,29): warning C4359: System_Security_Cryptography_X509Certificates_X509Certificate_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(115425,29): warning C4359: System_Runtime_Remoting_Messaging_AsyncResult_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(117090,29): warning C4359: System_Runtime_Serialization_ValueTypeFixupInfo_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(117227,29): warning C4359: System_Runtime_Serialization_ObjectManager_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(117264,29): warning C4359: System_Runtime_Serialization_ObjectHolder_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(117298,29): warning C4359: System_Runtime_Serialization_FixupHolder_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(119093,29): warning C4359: System_Runtime_Serialization_Formatters_Binary_WriteObjectInfo_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(119285,29): warning C4359: System_Runtime_Serialization_Formatters_Binary_ObjectReader_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(119329,29): warning C4359: System_Runtime_Serialization_Formatters_Binary_ObjectWriter_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(119370,29): warning C4359: System_Runtime_Serialization_Formatters_Binary___BinaryParser_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(119417,29): warning C4359: System_Runtime_Serialization_Formatters_Binary_ParseRecord_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(119627,29): warning C4359: System_Runtime_Serialization_Formatters_Binary_NameInfo_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(123330,29): warning C4359: System_Resources_ResourceReader_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(129908,29): warning C4359: System_Globalization_DaylightTime_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(131289,29): warning C4359: System_Globalization_EraInfo_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(131317,29): warning C4359: System_Globalization_GregorianCalendarHelper_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(133326,29): warning C4359: System_Diagnostics_StackFrame_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(140788,29): warning C4359: System_IO_UnmanagedMemoryAccessor_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(146911,29): warning C4359: Mono_Unity_UnityTls_unitytls_interface_struct_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(152181,29): warning C4359: System_Uri_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(153368,29): warning C4359: System_Threading_Barrier_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(154776,29): warning C4359: System_Text_RegularExpressions_Regex_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(155059,29): warning C4359: System_Text_RegularExpressions_RegexCompilationInfo_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(156063,29): warning C4359: System_Diagnostics_TraceEventCache_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(156660,29): warning C4359: System_Diagnostics_ProcessThreadTimes_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(157161,29): warning C4359: System_Diagnostics_Stopwatch_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(159558,29): warning C4359: System_Security_Cryptography_X509Certificates_X509ChainPolicy_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(170066,29): warning C4359: System_Collections_Concurrent_ConcurrentBag_T__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(172797,29): warning C4359: System_IO_DefaultWatcherData_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(172826,29): warning C4359: System_IO_FileData_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(176693,29): warning C4359: System_Net_WebClient_ProgressData_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(181784,29): warning C4359: System_Net_Cookie_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(182031,29): warning C4359: System_Net_CookieCollection_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(183307,29): warning C4359: System_Net_DigestSession_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(184050,29): warning C4359: System_Net_HttpListenerRequest_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(184093,29): warning C4359: System_Net_HttpListenerResponse_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(185257,29): warning C4359: System_Net_ServicePoint_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(185522,29): warning C4359: System_Net_ServicePointScheduler_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(186023,29): warning C4359: System_Net_WebConnection_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(187961,29): warning C4359: System_Net_NetworkInformation_PingReply_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(190619,29): warning C4359: System_Net_Cache_RequestCacheEntry_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(191824,29): warning C4359: System_Net_Sockets_IPv6MulticastOption_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(193734,29): warning C4359: System_Net_Mime_SmtpDateTime_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(196130,29): warning C4359: System_Net_WebSockets_ClientWebSocketOptions_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(207342,29): warning C4359: Rewired_ButtonStateRecorder_RdCHzsWMLaaCOTDtDPUhvdfUWWtN_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(207389,29): warning C4359: snzDlAKUlMXeBVaWzfslXTsdKrGIA_xNzfECUhGrdyQaMvPnGWSNPRZYTAA_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(207440,29): warning C4359: piLLgKjeskLusNuDtSEiraiHqWND_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(208366,29): warning C4359: Rewired_SteamAction_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(208388,29): warning C4359: Rewired_SteamActionSet_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(214437,29): warning C4359: kFuPHwnfsCwuzHDrtzjGMJwdcjDEA_zXVPGibrrpXgkFHxoPCnSYVFGOgL_vDCgFRWzNPHMivfcLVWzFcqIPqej_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(217786,29): warning C4359: Rewired_InputMapper_gtsgkRJkVZFGIhVbiBfEyxTgnwTec_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(218591,29): warning C4359: Rewired_Player_ControllerHelper_rMWxWrufycGUSiMSaFkcnBvlciyW_CCtQmfiCiLYXpyDnPHTEbFqWCFaHA_______Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(218721,29): warning C4359: Rewired_Player_ControllerHelper_sRTBJiyOzrLJeZMfMScvYoeENrpm_zMxLgZVIrQrOBtLcrbYoAupEgXYyA_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(220343,29): warning C4359: Rewired_Player_ControllerHelper_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(221465,29): warning C4359: Rewired_ReInput_NjXLLDTPDWnVZVirsVtCdbPjHdrhA_CBApMUGvgRiNwONdkTGoDIJmDvxt_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(221514,29): warning C4359: Rewired_ReInput_NjXLLDTPDWnVZVirsVtCdbPjHdrhA_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(221866,29): warning C4359: Rewired_InputManagers_CustomInputManager_ynGfcgDSBjHTSlxjgsUUNkrNpBab_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(221961,29): warning C4359: Rewired_InputManagers_CustomInputManager_QZoUGTZzsLqcAOMwYAEWZjQlbBCb_ehoVObnrJOhWWhLGbumsdBhhjhCIb_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(223554,29): warning C4359: Rewired_Platforms_XboxOne_XboxOneGamepadExtension_FCMvAIvATxvEIlEjqcIHawZZHsLmA_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(240598,29): warning C4359: Rewired_Internal_Localization_DeviceLocalizationInfo_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(244880,29): warning C4359: Rewired_Utils_Classes_Utility_TimerAbs_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(244903,29): warning C4359: Rewired_Utils_Classes_Utility_TimerRealTime_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(244926,29): warning C4359: Rewired_Utils_Classes_Utility_Timer_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(244949,29): warning C4359: Rewired_Utils_Classes_Utility_FrameTimer_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(245063,29): warning C4359: Rewired_Utils_Classes_Utility_ThreadHelper_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(245383,29): warning C4359: Rewired_Utils_Classes_Utility_ObjectPool_T__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(245434,29): warning C4359: Rewired_Utils_Classes_Utility_ThreadSafeObjectPool_T__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(245577,29): warning C4359: Rewired_Utils_Classes_Utility_UnityStopwatch_FBSEuNfaocfGpRIbsVHobPsYaptYA_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(247386,29): warning C4359: Rewired_Utils_Classes_Data_NativeRingBuffer_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(247896,29): warning C4359: RBTbtfxxywGQyDGTOxgBUjFHeEtDA____Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(247932,29): warning C4359: XeeKJFtspjYiwTXnQkgeVgVUAyteA____Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(250493,29): warning C4359: Epic_OnlineServices_Helper_DelegateHolder_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(250571,29): warning C4359: Epic_OnlineServices_Helper___c__DisplayClass5_0_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(324973,29): warning C4359: UnityEngine_UIElements_ClickDetector_ButtonClickStatus_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(349856,29): warning C4359: UnityEngine_UIElements_EventBase_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(360671,29): warning C4359: UnityEngine_UIElements_ScheduledItem_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(364769,29): warning C4359: UnityEngine_UIElements_StylePropertyAnimationSystem_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(365881,29): warning C4359: UnityEngine_UIElements_TextSelectingManipulator_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(375298,29): warning C4359: UnityEngine_UIElements_Experimental_ValueAnimation_T__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(380057,29): warning C4359: System_Xml_XmlReaderSettings_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(389358,29): warning C4359: System_Xml_Serialization_EnumMap_EnumMapMember_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(394794,29): warning C4359: System_Xml_Schema_SchemaDeclBase_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(403336,29): warning C4359: MS_Internal_Xml_XPath_XPathScanner_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(406272,29): warning C4359: System_Data_DataRow_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(410333,29): warning C4359: System_Data_SqlTypes_SqlBytes_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(410363,29): warning C4359: System_Data_SqlTypes_SqlChars_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(414297,29): warning C4359: kfaUicXMnhcpxgTsBbcmGbCvFksfA_wcbhCQGjtttpRnGlfNeithYgWEVGA_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(415458,29): warning C4359: HhkGLvFNGKVTlcLMLhQOSBTsmioq_ZNQglfzTffPsunPxwnzNRFWqZkQg_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(415526,29): warning C4359: HhkGLvFNGKVTlcLMLhQOSBTsmioq_UUVUUvRowHYCnbidpptwhovMOjJA_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(416775,29): warning C4359: UpvEcXATYczqZEXPWJfrDqkKTxVo_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(417581,29): warning C4359: IMIKpXqjqFXciFiwraohRJYwLECW_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(417802,29): warning C4359: xfWxcsgyOHlRVBWPlFBnzTNfOWyh_tzHKkISDpyCSemjSKhDbQFaafowFA_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(418185,29): warning C4359: BXNNtghmaJlielKTRkwCNSjpnxvd_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(420002,29): warning C4359: qcOWudJHtCvcpVIncAxcGhrhVCSG_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(427588,29): warning C4359: Rewired_HID_Drivers_NintendoSwitchGamepadDriver_eghjaZjKjzQHPKSKPLVMMIzbVTdJ_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(428859,29): warning C4359: Sentry_Breadcrumb_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(429197,29): warning C4359: Sentry_DebugImage_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(429526,29): warning C4359: Sentry_GlobalSessionManager_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(430650,29): warning C4359: Sentry_PersistedSessionUpdate_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(431262,29): warning C4359: Sentry_SentryEvent_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(432090,29): warning C4359: Sentry_SentryOptions_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(432436,29): warning C4359: Sentry_SentryPropagationContext_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(432615,29): warning C4359: Sentry_SentryStackFrame_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(432809,29): warning C4359: Sentry_SentryTraceHeader_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(432867,29): warning C4359: Sentry_Session_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(432985,29): warning C4359: Sentry_SessionUpdate_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(433070,29): warning C4359: Sentry_Span_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(433118,29): warning C4359: Sentry_SpanContext_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(433234,29): warning C4359: Sentry_SpanTracer_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(433628,29): warning C4359: Sentry_Transaction_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(433852,29): warning C4359: Sentry_TransactionTracer_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(434153,29): warning C4359: Sentry_Protocol_App_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(434250,29): warning C4359: Sentry_Protocol_Device_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(434491,29): warning C4359: Sentry_Protocol_ProfileInfo_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(434521,29): warning C4359: Sentry_Protocol_Response_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(434579,29): warning C4359: Sentry_Protocol_SampleProfile_Sample_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(434776,29): warning C4359: Sentry_Protocol_Trace_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(436297,29): warning C4359: Sentry_Internal_ClientReport_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(437886,29): warning C4359: Sentry_Internal_ProcessInfo_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(439879,29): warning C4359: Sentry_Internal_Http_RateLimit_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(440406,29): warning C4359: Sentry_Internal_Extensions_PEDebugImageData_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(440904,29): warning C4359: Sentry_Http_HttpTransportBase___c__DisplayClass10_0_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(484474,29): warning C4359: System_IO_MemoryMappedFiles_MemoryMappedView_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(484803,29): warning C4359: System_Threading_ReaderWriterCount_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(484848,29): warning C4359: System_Threading_ReaderWriterLockSlim_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(500021,29): warning C4359: TMPro_TMP_MaterialManager_FallbackMaterial_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(505017,29): warning C4359: System_Text_Json_Utf8JsonWriter_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(521165,29): warning C4359: UnityEngine_Purchasing_ProductMetadata_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(523037,29): warning C4359: UnityEngine_Purchasing_Price_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(523478,29): warning C4359: UnityEngine_Purchasing_TimeSpanUnits_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(523549,29): warning C4359: UnityEngine_Purchasing_SubscriptionInfo_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(525546,29): warning C4359: Mono_Security_X509_X509Crl_X509CrlEntry_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(525569,29): warning C4359: Mono_Security_X509_X509Crl_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(525599,29): warning C4359: Mono_Security_X509_X509Certificate_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(527236,29): warning C4359: Mono_Security_Interface_MonoTlsSettings_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(530206,29): warning C4359: UnityEngine_ResourceManagement_Util_UnityWebRequestResult_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(530342,29): warning C4359: UnityEngine_ResourceManagement_ResourceProviders_AssetBundleRequestOptions_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(530435,29): warning C4359: UnityEngine_ResourceManagement_ResourceProviders_AssetBundleResource_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(535236,29): warning C4359: UnityEngine_AddressableAssets_Initialization_CacheInitializationData_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(536471,29): warning C4359: System_Reflection_PortableExecutable_PEHeader_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(538501,29): warning C4359: System_Reflection_Metadata_MetadataReader_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(540435,29): warning C4359: Sentry_Unity_UnityIl2CppEventExceptionProcessor_DebugImageInfo_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(541115,29): warning C4359: Sentry_Unity_MainThreadData_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(541791,29): warning C4359: Sentry_Unity_TimeDebounceBase_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(544160,29): warning C4359: Hazel_ConnectionStatistics_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(544348,29): warning C4359: Hazel_ListenerStatistics_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(544804,29): warning C4359: Hazel_UPnP_UPnPHelper_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(544878,29): warning C4359: Hazel_Udp_BroadcastPacket_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(546246,29): warning C4359: System_Net_Http_MonoWebRequestHandler_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(546871,29): warning C4359: System_Net_Http_Headers_CacheControlHeaderValue_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(547001,29): warning C4359: System_Net_Http_Headers_ContentRangeHeaderValue_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(548058,29): warning C4359: System_Net_Http_Headers_RangeConditionHeaderValue_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(548104,29): warning C4359: System_Net_Http_Headers_RangeItemHeaderValue_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(548127,29): warning C4359: System_Net_Http_Headers_RetryConditionHeaderValue_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(548150,29): warning C4359: System_Net_Http_Headers_StringWithQualityHeaderValue_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(548242,29): warning C4359: System_Net_Http_Headers_WarningHeaderValue_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(549274,29): warning C4359: System_Buffers_ReadOnlySequenceSegment_T__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(561895,29): warning C4359: UnityEngine_Purchasing_PayoutDefinition_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(562829,29): warning C4359: UnityEngine_Purchasing_Telemetry_TelemetryMetricsInstanceWrapper___c__DisplayClass7_0_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(563996,29): warning C4359: Unity_Services_Analytics_AnalyticsServiceInstance_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(564494,29): warning C4359: Unity_Services_Analytics_Data_StdCommonParams_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(565044,29): warning C4359: Unity_Services_Analytics_Internal_DiskCache_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(566877,29): warning C4359: CsvHelper_CsvParser_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(569128,29): warning C4359: Unity_Services_Core_Internal_PackageInitializationInfo_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(580510,29): warning C4359: Unity_Services_Core_Scheduler_Internal_ActionScheduler_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(580636,29): warning C4359: Unity_Services_Core_Scheduler_Internal_ScheduledInvocation_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(581838,29): warning C4359: UnityEngine_Purchasing_Default_WinProductDescription_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(582143,29): warning C4359: UnityEngine_Purchasing_Security_AppleInAppPurchaseReceipt_Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(614619,29): warning C4359: System_Lazy_DateTimeOffset__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(659852,29): warning C4359: RBTbtfxxywGQyDGTOxgBUjFHeEtDA_FaVFYcDpCyvshrEyVMRMxCjPlineb__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(660177,29): warning C4359: Rewired_Utils_Classes_Utility_ObjectPool_CnSIGqGRGpRxFeYHoKnvWOiZFlaDA__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(661196,29): warning C4359: Rewired_Utils_Classes_Utility_ObjectPool_ExsWQUADpWcumnyrnYXiDOGqeUGG__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(662460,29): warning C4359: RBTbtfxxywGQyDGTOxgBUjFHeEtDA_ControllerElementIdentifier__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(662572,29): warning C4359: RBTbtfxxywGQyDGTOxgBUjFHeEtDA_ControllerTemplateElementIdentifier__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(664187,29): warning C4359: Rewired_Player_ControllerHelper_rMWxWrufycGUSiMSaFkcnBvlciyW_CCtQmfiCiLYXpyDnPHTEbFqWCFaHA_Joystick__JoystickMap__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(670753,29): warning C4359: XeeKJFtspjYiwTXnQkgeVgVUAyteA_sAGNrvBdoFyDTeGZfiSsfGbFZltX__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(670893,29): warning C4359: XeeKJFtspjYiwTXnQkgeVgVUAyteA_IPrefetch__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(675083,29): warning C4359: UnityEngine_UIElements_Experimental_ValueAnimation_StyleValues__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(688467,29): warning C4359: Rewired_Utils_Classes_Utility_ThreadSafeObjectPool_MtRjUhpXuLnjGhlzwhWxZYToKTSt_cZiAjnIcqnnIkXHUSNeyfqqpiKESA__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(688498,29): warning C4359: Rewired_Utils_Classes_Utility_ThreadSafeObjectPool_MtRjUhpXuLnjGhlzwhWxZYToKTSt_uXSwMKkbNTPJNcJPUqOiiPxXWplQ__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(691168,29): warning C4359: Rewired_Utils_Classes_Utility_ObjectPool_lcphAiLKxdkzjqNzNjGlxQAawGPm_dsDelvNVMWVMRwGGVJhmXrDEDmUH__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(691265,29): warning C4359: Rewired_Utils_Classes_Utility_ObjectPool_JIGggWaHOpZNpICgoWJvTstlddXBA_gmaoUivdsOxmsLhgpwjODvgQbLfm__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(692789,29): warning C4359: System_Collections_Concurrent_ConcurrentBag_Attachment__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(692823,29): warning C4359: System_Collections_Concurrent_ConcurrentBag_ISentryEventExceptionProcessor__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(692857,29): warning C4359: System_Collections_Concurrent_ConcurrentBag_ISentryEventProcessor__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(692891,29): warning C4359: System_Collections_Concurrent_ConcurrentBag_ISentryTransactionProcessor__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(693180,29): warning C4359: System_Collections_Concurrent_ConcurrentBag_Package__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(693214,29): warning C4359: System_Collections_Concurrent_ConcurrentBag_string__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(695846,29): warning C4359: System_Collections_Concurrent_ConcurrentBag_Breadcrumb__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(695880,29): warning C4359: System_Collections_Concurrent_ConcurrentBag_SpanTracer__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(715882,29): warning C4359: System_Collections_Concurrent_ConcurrentBag_ValueTuple_IGoogleBillingResult__IEnumerable_AndroidJavaObject____Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(741613,29): warning C4359: Rewired_Player_ControllerHelper_rMWxWrufycGUSiMSaFkcnBvlciyW_CCtQmfiCiLYXpyDnPHTEbFqWCFaHA_CustomController__CustomControllerMap__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(741669,29): warning C4359: Rewired_Player_ControllerHelper_rMWxWrufycGUSiMSaFkcnBvlciyW_CCtQmfiCiLYXpyDnPHTEbFqWCFaHA_Keyboard__KeyboardMap__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\il2cpp\il2cpp.h(741725,29): warning C4359: Rewired_Player_ControllerHelper_rMWxWrufycGUSiMSaFkcnBvlciyW_CCtQmfiCiLYXpyDnPHTEbFqWCFaHA_Mouse__MouseMap__Fields: текущее выравнивание (8) больше, чем значение, указанное в __declspec(align())
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\Rage\randcolor_all.hpp(12,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\Rage\randcolor_all.hpp(31,22): warning C4018: <: несоответствие типов со знаком и без знака
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\UI\Notification.hpp(47,34): warning C4018: >=: несоответствие типов со знаком и без знака
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\Visual\RoleHack.hpp(41,27): warning C4018: <: несоответствие типов со знаком и без знака
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\Visual\RoleHack.hpp(76,27): warning C4018: <: несоответствие типов со знаком и без знака
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\Rage\task_hack.hpp(19,23): warning C4018: <: несоответствие типов со знаком и без знака
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\Cheats\Hooks\Hooks.hpp(129,24): warning C4018: <: несоответствие типов со знаком и без знака
+  (компиляция исходного файла "main.cpp")
+  
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\main.cpp(154,12): warning C4305: +=: усечение из "double" в "float"
+E:\new era\base\astrals.tech base\ImGui DirectX 11 Kiero Hook\main.cpp(159,12): warning C4305: -=: усечение из "double" в "float"
+     Создается библиотека E:\new era\base\astrals.tech base\Release\ImGui DirectX 11 Kiero Hook.lib и объект E:\new era\base\astrals.tech base\Release\ImGui DirectX 11 Kiero Hook.exp
+  Создание кода
+  0 of 3271 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  ImGui DirectX 11 Kiero Hook.vcxproj -> E:\new era\base\astrals.tech base\Release\ImGui DirectX 11 Kiero Hook.dll
