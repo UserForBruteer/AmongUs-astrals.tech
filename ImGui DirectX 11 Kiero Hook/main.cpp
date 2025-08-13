@@ -236,10 +236,10 @@ DWORD WINAPI MainThread(LPVOID lpReserved)
 		{
 			kiero::bind(8, (void**)& oPresent, hkPresent);
 			Helper::Methods::init();
-			#ifdef NDEBUG
-			// nothing todo
-			#else
+			#ifdef _DEBUG
 			open_console();
+			#else
+			// nothing todo
 			#endif
 			hooks::Init();
 			init_hook = true;
