@@ -282,7 +282,7 @@ namespace menu2 {
             dl->AddRectFilled(wp, br, theme.bg_tl, theme.rounding);
             dl->AddRect(wp, br, theme.border, theme.rounding);
 
-            Helper::Methods::AddText(ImGui::GetFont(), 20.0f, true, true, ImVec2(wp.x + theme.padding, wp.y + 8.0f), theme.text, "Astral.tech", dl);
+            Helper::Methods::AddText(ImGui::GetFont(), 20.0f, true, true, ImVec2(wp.x + theme.padding, wp.y + 8.0f), theme.text, "Astrals.tech", dl);
 
             Helper::Methods::AddText(ImGui::GetFont(), 12.0f, false, false, ImVec2(wp.x + theme.padding + 2.0f, wp.y + 30.0f), theme.muted, "an among us dlc", dl);
 
