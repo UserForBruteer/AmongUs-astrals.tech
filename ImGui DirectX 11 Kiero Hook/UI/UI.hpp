@@ -333,10 +333,6 @@ namespace menu2 {
                 ImGui::Dummy(ImVec2(6, 8));
                 CustomCheckboxWithBind("Kick self", &UI::spam, "spam_vis");
 
-                ImGui::SameLine();
-                if (CustomButton("Set random color all", ImVec2(220, 36))) {
-                    randcolor_all_class->run();
-                }
                 ImGui::Dummy(ImVec2(6, 8));
                 if (CustomButton("Set notify sound", ImVec2(240, 36))) {
                     UI::path = OpenFileDialog();
@@ -371,6 +367,10 @@ namespace menu2 {
                 CustomCheckboxWithBind("No kill distance", &UI::no_cdkill, "no_kill_dist_bind");
                 ImGui::Dummy(ImVec2(6, 6));
                 CustomCheckboxWithBind("Target strafe", &UI::target_strafe, "target_strafe_bind");
+                ImGui::Dummy(ImVec2(6, 6));
+                if (CustomButton("Make all task", ImVec2(220, 36))) {
+                    UI::task_hack = true;
+                }
             }
             else if (selected_tab == 3) {
                 ImGui::Dummy(ImVec2(6, 6));
