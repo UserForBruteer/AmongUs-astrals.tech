@@ -266,6 +266,54 @@ namespace menu2 {
         Helper::Methods::AddText(ImGui::GetFont(), 13.0f, false, false, valPos, theme.text, buf, dl);
     }
 
+    inline void CustomSliderInt(const char* label, int* v, int v_min, int v_max) {
+        ImDrawList* dl = ImGui::GetWindowDrawList();
+        ImVec2 cur = ImGui::GetCursorScreenPos() + ImVec2(3, 0);
+        float fullw = ImGui::GetContentRegionAvailWidth() - 3;
+        ImVec2 size = ImVec2(fullw, 28.0f);
+        ImGuiID gid = ImGui::GetID(label);
+
+        ImGui::InvisibleButton(label, size);
+        bool hovered = ImGui::IsItemHovered();
+        bool active = ImGui::IsItemActive();
+
+        float old = GetAnim(gid);
+        float target = hovered ? 1.0f : 0.0f;
+        float newv = Lerp(old, target, ImGui::GetIO().DeltaTime * 18.0f);
+        SetAnim(gid, newv);
+
+        ImVec2 br = ImVec2(cur.x + size.x, cur.y + size.y);
+        ImU32 bg = BlendColor(IM_COL32(28, 28, 32, 220), theme.accent_soft, newv * 0.06f);
+        dl->AddRectFilled(cur, br, bg, 6.0f);
+        dl->AddRect(cur, br, theme.border, 6.0f);
+
+        ImVec2 trackP = ImVec2(cur.x + 12, cur.y + size.y * 0.5f - 6);
+        ImVec2 trackB = ImVec2(cur.x + size.x - 12, cur.y + size.y * 0.5f + 6);
+        dl->AddRectFilled(trackP, trackB, IM_COL32(40, 40, 44, 200), 6.0f);
+
+        float ratio = float(*v - v_min) / float(v_max - v_min);
+        ratio = std::clamp(ratio, 0.0f, 1.0f);
+        ImVec2 filledB = ImVec2(trackP.x + (trackB.x - trackP.x) * ratio, trackB.y);
+        dl->AddRectFilled(trackP, ImVec2(filledB.x, trackB.y), theme.accent, 6.0f);
+
+        ImVec2 handleCenter = ImVec2(trackP.x + (trackB.x - trackP.x) * ratio, (trackP.y + trackB.y) * 0.5f);
+        dl->AddCircleFilled(handleCenter, 8.0f, theme.accent);
+        dl->AddCircle(handleCenter, 8.0f, IM_COL32(255, 255, 255, 35));
+
+        if (active && ImGui::IsMouseDown(ImGuiMouseButton_Left)) {
+            float mx = ImGui::GetIO().MousePos.x;
+            float rel = (mx - trackP.x) / (trackB.x - trackP.x);
+            rel = std::clamp(rel, 0.0f, 1.0f);
+            *v = v_min + int(rel * float(v_max - v_min) + 0.5f); // round to nearest int
+        }
+
+        Helper::Methods::AddText(ImGui::GetFont(), 13.0f, false, false, ImVec2(cur.x + 14, cur.y - 18), theme.muted, label, dl);
+        char buf[64]; snprintf(buf, sizeof(buf), "%d", *v);
+        ImVec2 valPos = ImVec2(cur.x + size.x - ImGui::GetFont()->CalcTextSizeA(13.f, FLT_MAX, 0.f, buf).x - 14, cur.y - 18);
+        Helper::Methods::AddText(ImGui::GetFont(), 13.0f, false, false, valPos, theme.text, buf, dl);
+    }
+
+
     struct MenuRenderer {
 
         int selected_tab = 0;
@@ -385,6 +433,15 @@ namespace menu2 {
             else if (selected_tab == 3) {
                 ImGui::Dummy(ImVec2(6, 6));
                 CustomCheckboxWithBind("Vanish // IN WORK", &UI::vanish, "vanish_bind");
+                ImGui::Dummy(ImVec2(6, 6));
+                CustomCheckboxWithBind("FakeLag", &UI::clums, "clums_bind");
+                if (UI::clums) {
+                    ImGui::Dummy(ImVec2(6, 12));
+                    CustomSliderInt("Lag ticks", &UI::lag, 0, 60);
+                    ImGui::Dummy(ImVec2(6, 12));
+                    CustomSliderInt("UnLag (0 = full lag)", &UI::unlag, 0, 60);
+                }
+
             }
             else if (selected_tab == 4) {
                 ImGui::Dummy(ImVec2(6, 6));

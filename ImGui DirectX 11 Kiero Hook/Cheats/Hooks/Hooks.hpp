@@ -380,21 +380,36 @@ HOOK_FUNC(void, HttpMatchmakerManagerHostServer_ctor, HttpMatchmakerManager_Host
     std::cout << Ip_str << std::endl;
 }
 int wait = 0;
-HOOK_FUNC(void, PlayerControl_FixedUpdate, uintptr_t inst) {
-    if (inst == Helper::Var::LocalPlayer) {
-        if (wait >= 0) {
-            wait = 50;
-            old_PlayerControl_FixedUpdate(inst);
+
+HOOK_FUNC(void, CustomNetworkTransform_FixedUpdate, uintptr_t inst, void* methods) {
+    if (*reinterpret_cast<uintptr_t*>(inst + 0x28) == Helper::Var::LocalPlayer && UI::clums) {
+        auto trans_lag = Helper::Methods::get_transform(inst);
+        if (!trans_lag->GetPointer()) {
+            old_CustomNetworkTransform_FixedUpdate(inst, methods);
             return;
         }
-        else {
-            wait -= 1;
-            return;
+        ImVec2 Position_lag = *(ImVec2*)(inst + 0x4C);
+        Helper::Var::Position_lag = { Position_lag.x, Position_lag.y, Helper::Var::Position_local.z };
+        Helper::Var::size_lag = trans_lag->get_localScale();
+        if (wait <= 0) {
+            wait = UI::unlag + UI::lag;
         }
+
+        if (UI::unlag > 0 && wait > UI::lag) {
+            old_CustomNetworkTransform_FixedUpdate(inst, methods);
+        }
+        else if (wait > 0 && wait <= UI::lag) {
+        }
+
+        if (wait > 0)
+            wait--;
+
+        return;
     }
-    old_PlayerControl_FixedUpdate(inst);
-    return;
+    old_CustomNetworkTransform_FixedUpdate(inst, methods);
 }
+
+
 
 namespace hooks {
     
@@ -416,7 +431,7 @@ namespace hooks {
         HOOK_PROC(0x7082B0, hook_HatManager_GetUnlockedNamePlates, &old_HatManager_GetUnlockedNamePlates);
         HOOK_PROC(0x67C5E0, hook_GameListing_get_IPString, &old_GameListing_get_IPString);
         HOOK_PROC(0x50C540, hook_HttpMatchmakerManagerHostServer_ctor, &old_HttpMatchmakerManagerHostServer_ctor);
-        HOOK_PROC(0x557120, hook_PlayerControl_FixedUpdate, &old_PlayerControl_FixedUpdate);
+        HOOK_PROC(0x4C9080, hook_CustomNetworkTransform_FixedUpdate, &old_CustomNetworkTransform_FixedUpdate);
         //HOOK_PROC(0x3CABD0, hook_get_ViewDistance, &old_get_ViewDistance); 
         //HOOK_PROC(0x4CFA30, hook_ServerManager_get_TargetServer, &old_ServerManager_get_TargetServer);
     }

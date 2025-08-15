@@ -149,7 +149,23 @@ public:
                 }
             }
         }
+        if (UI::clums) {
+            // Верхний левый угол
+            unity::vector topLeft_lag = unity::vector(Helper::Var::Position_lag.x - Helper::Var::size_lag.x / 2, Helper::Var::Position_lag.y - Helper::Var::size_lag.y / 2, Helper::Var::Position_lag.z);
+            // Нижний правый угол
+            unity::vector bottomRight_lag = unity::vector(Helper::Var::Position_lag.x + Helper::Var::size_lag.x / 2, Helper::Var::Position_lag.y + Helper::Var::size_lag.y / 2, Helper::Var::Position_lag.z);
 
+
+            auto lt_lag_screen = Helper::Methods::WorldToScreenPoint(Helper::Methods::get_current(), topLeft_lag);
+            auto rb_lag_screen = Helper::Methods::WorldToScreenPoint(Helper::Methods::get_current(), bottomRight_lag);
+
+            ImGui::GetBackgroundDrawList()->AddRect(ImVec2(lt_lag_screen.x, screenSize.y - lt_lag_screen.y),
+                ImVec2(rb_lag_screen.x, screenSize.y - rb_lag_screen.y),
+                ImColor(0, 0, 0, 255), 0, 15, 3);
+            ImGui::GetBackgroundDrawList()->AddRect(ImVec2(lt_lag_screen.x, screenSize.y - lt_lag_screen.y),
+                ImVec2(rb_lag_screen.x, screenSize.y - rb_lag_screen.y),
+                ImColor(0, 255, 255, 255), 0);
+        }
         Helper::Var::closest = closestObj;
         if (minDist <= Helper::Var::dist_attack && UI::target_strafe) {
             float radius = Helper::Var::dist_attack - 0.1f;

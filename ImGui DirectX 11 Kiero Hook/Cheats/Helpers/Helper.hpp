@@ -44,6 +44,8 @@ namespace Helper {
 		uintptr_t LocalPlayer;
 		ImVec2 OnScreen_local;
 		unity::vector Position_local;
+		unity::vector Position_lag;
+		unity::vector size_lag;
 		std::vector<uintptr_t> NetworkedPlayerInfo_list;
 		float dist_attack = 2;
 		bool needkillTimer = true;
