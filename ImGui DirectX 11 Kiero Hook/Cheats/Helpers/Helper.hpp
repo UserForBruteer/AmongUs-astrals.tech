@@ -1,6 +1,8 @@
 #pragma once
 
 #define uint unsigned int
+#define ushort unsigned short
+using GCHandle = uint32_t;
 
 #include <cstdint>
 #include <libloaderapi.h>
@@ -49,7 +51,8 @@ namespace Helper {
 		uintptr_t closest;
 		int pl_size;
 		int needback;
-		bool wassss, needrename;
+		bool wassss, needrename, GetIP;
+		std::string IP_server;
 	};
 	namespace Methods {
 		unity::vector(*WorldToScreenPoint)(uintptr_t, unity::vector);
@@ -123,7 +126,38 @@ namespace Helper {
 			get_parent = reinterpret_cast<Transform*(*) (Transform*)>(Helper::Var::gameAssembly + 0x1F00600);
 			get_localScale = reinterpret_cast<unity::vector(*) (Transform*)>(Helper::Var::gameAssembly + 0x1F03670);
 		}
+		bool IsValidPtr(void* ptr, size_t size = sizeof(void*)) noexcept {
+			if (!ptr)
+				return false;
+			uintptr_t addr = reinterpret_cast<uintptr_t>(ptr);
+			if (addr < 0x10000 || addr > 0x00007FFFFFFFFFFF)
+				return false;
+			#ifdef _WIN32
+				MEMORY_BASIC_INFORMATION mbi;
+				if (!VirtualQuery(ptr, &mbi, sizeof(mbi)))
+					return false;
+				if (mbi.State != MEM_COMMIT || (mbi.Protect & (PAGE_NOACCESS | PAGE_GUARD)))
+					return false;
+			#endif
+			return true;
+		}
+		inline bool IsValidPtrRegion(const void* p, size_t size = sizeof(void*)) noexcept {
+			if (!p) return false;
+			MEMORY_BASIC_INFORMATION mbi{};
+			if (!VirtualQuery(p, &mbi, sizeof(mbi))) return false;
+			if (mbi.State != MEM_COMMIT) return false;
+			if (mbi.Protect & (PAGE_NOACCESS | PAGE_GUARD)) return false;
+			auto begin = reinterpret_cast<uintptr_t>(p);
+			auto end = begin + size;
+			auto rbeg = reinterpret_cast<uintptr_t>(mbi.BaseAddress);
+			auto rend = rbeg + mbi.RegionSize;
+			return end <= rend;
+		}
 
+		// Проверить адрес поля внутри объекта.
+		inline bool IsValidField(uintptr_t base, size_t off, size_t sz) noexcept {
+			return base && IsValidPtrRegion(reinterpret_cast<void*>(base + off), sz);
+		}
 		inline ImVec2 flooring(ImVec2 vec) {
 			return { (float)(vec.x), (float)int(vec.y) };
 		}
@@ -162,6 +196,8 @@ namespace Helper {
 		}
 
 		bool LocalInGame() {
+			if (!Helper::Var::LocalPlayer)
+				return false;
 			AmongUsClient_c* AmongUsClient = *reinterpret_cast<AmongUsClient_c**>(Helper::Var::gameAssembly + Helper::Var::AmongUsClient_TypeInfo);
 			if (!AmongUsClient)
 				return false;
@@ -170,6 +206,8 @@ namespace Helper {
 			return ((NetworkModes__Enum)instance->fields.NetworkMode == NetworkModes__Enum::LocalGame || (InnerNetClient_GameStates__Enum)instance->fields.GameState == InnerNetClient_GameStates__Enum::Started);
 		}
 		bool OnlineInGame() {
+			if (!Helper::Var::LocalPlayer)
+				return false;
 			AmongUsClient_c* AmongUsClient = *reinterpret_cast<AmongUsClient_c**>(Helper::Var::gameAssembly + Helper::Var::AmongUsClient_TypeInfo);
 			if (!AmongUsClient)
 				return false;
@@ -178,6 +216,8 @@ namespace Helper {
 			return ((NetworkModes__Enum)instance->fields.NetworkMode == NetworkModes__Enum::OnlineGame || (InnerNetClient_GameStates__Enum)instance->fields.GameState == InnerNetClient_GameStates__Enum::Started);
 		}
 		bool LocalInLobby() {
+			if (!Helper::Var::LocalPlayer)
+				return false;
 			AmongUsClient_c* AmongUsClient = *reinterpret_cast<AmongUsClient_c**>(Helper::Var::gameAssembly + Helper::Var::AmongUsClient_TypeInfo);
 			if (!AmongUsClient)
 				return false;
@@ -186,6 +226,8 @@ namespace Helper {
 			return ((NetworkModes__Enum)instance->fields.NetworkMode == NetworkModes__Enum::LocalGame || (InnerNetClient_GameStates__Enum)instance->fields.GameState == InnerNetClient_GameStates__Enum::Joined);
 		}
 		bool OnlineInLobby() {
+			if (!Helper::Var::LocalPlayer)
+				return false;
 			AmongUsClient_c* AmongUsClient = *reinterpret_cast<AmongUsClient_c**>(Helper::Var::gameAssembly + Helper::Var::AmongUsClient_TypeInfo);
 			if (!AmongUsClient)
 				return false;
@@ -195,6 +237,8 @@ namespace Helper {
 		}
 
 		bool IsInLobby() {
+			if (!Helper::Var::LocalPlayer)
+				return false;
 			AmongUsClient_c* AmongUsClient = *reinterpret_cast<AmongUsClient_c**>(Helper::Var::gameAssembly + Helper::Var::AmongUsClient_TypeInfo);
 			if (!AmongUsClient)
 				return false;
@@ -205,6 +249,8 @@ namespace Helper {
 		}
 
 		bool IsInGame() {
+			if (!Helper::Var::LocalPlayer)
+				return false;
 			AmongUsClient_c* AmongUsClient = *reinterpret_cast<AmongUsClient_c**>(Helper::Var::gameAssembly + Helper::Var::AmongUsClient_TypeInfo);
 			if (!AmongUsClient)
 				return false;

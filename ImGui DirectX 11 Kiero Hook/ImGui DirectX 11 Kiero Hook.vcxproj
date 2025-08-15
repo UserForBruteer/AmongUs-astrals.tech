@@ -184,6 +184,7 @@
     <ClInclude Include="Cheats\Rage\vanish.hpp" />
     <ClInclude Include="Cheats\Visual\Esp.hpp" />
     <ClInclude Include="Cheats\Visual\RoleHack.hpp" />
+    <ClInclude Include="Cheats\Visual\Trail.hpp" />
     <ClInclude Include="imgui\imconfig.h" />
     <ClInclude Include="imgui\imgui.h" />
     <ClInclude Include="imgui\imgui_impl_dx11.h" />

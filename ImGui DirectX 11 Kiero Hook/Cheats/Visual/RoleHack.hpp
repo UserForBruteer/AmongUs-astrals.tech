@@ -152,7 +152,7 @@ public:
             ImVec2 currentTextPos = ImVec2(pos.x + padding.x, pos.y + padding.y);
 
             drawList->AddRectFilled(pos, listEndPos, IM_COL32(30, 30, 30, 200), 8.0f);
-            drawList->AddRect(pos, listEndPos, IM_COL32(200, 50, 50, 220), 8.0f, 0, 1.0);
+            drawList->AddRect(pos, listEndPos, IM_COL32(200, 50, 50, 220), 8.0f);
 
             drawList->AddText(ImGui::GetFont(), fontSize, currentTextPos, textColor, "Impostors:");
             currentTextPos.y += lineSpacing;

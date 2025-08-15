@@ -238,6 +238,9 @@
     <ClInclude Include="Variables\mihail2.h">
       <Filter>Source Files\Main\Variables</Filter>
     </ClInclude>
+    <ClInclude Include="Cheats\Visual\Trail.hpp">
+      <Filter>Source Files\Cheats\Visual</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="kiero\minhook\dll_resources\MinHook.def">

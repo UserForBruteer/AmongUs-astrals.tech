@@ -68,6 +68,7 @@ LRESULT __stdcall WndProc(const HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 	return CallWindowProc(oWndProc, hWnd, uMsg, wParam, lParam);
 }
 esp* esp_class = new esp();
+trail* trail_class = new trail();
 rolehack* rolehack_class = new rolehack();
 ctrl_tp* ctrl_tp_class = new ctrl_tp();
 speed* speed_class = new speed();
@@ -179,9 +180,6 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
 	ImGui_ImplDX11_NewFrame();
 	ImGui_ImplWin32_NewFrame();
 	ImGui::NewFrame();
-	ImGui::GetForegroundDrawList()->AddRectFilled(ImVec2(5, 5), ImVec2(35, 35), ImColor(49, 71, 71, 122), 5);
-	ImGui::GetForegroundDrawList()->AddRect(ImVec2(5, 5), ImVec2(35, 35), ImColor(49, 71, 71, 255), 5, 15, 2);
-	ImGui::GetForegroundDrawList()->AddImage((void*)UI::logo, ImVec2(10, 10), ImVec2(30, 30));
 
 	if (!UI::_MISHA) {
 		if (UI::startup) {
@@ -189,8 +187,8 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
 		}
 		else {
 			menu2::MenuRenderer::Get().Render();
-			if (UI::esp)
-				esp_class->draw();
+			menu2::MenuRenderer::Get().WaterMark();
+			esp_class->draw();
 			if (UI::rolehack)
 			{
 				rolehack_class->draw();
@@ -200,6 +198,9 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
 			}
 			if (UI::speed_check) {
 				speed_class->up();
+			}
+			if (UI::trail) {
+				trail_class->draw();
 			}
 			vanish_class->jump();
 			noclip_class->run();

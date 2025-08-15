@@ -31,6 +31,8 @@ namespace menu2 {
         ImU32 bg_tr = IM_COL32(30, 32, 40, 220);
         ImU32 bg_br = IM_COL32(28, 30, 36, 220);
         ImU32 bg_bl = IM_COL32(20, 22, 28, 220);
+        ImU32 water_bg = IM_COL32(19, 21, 28, 122);
+        ImU32 water_border = IM_COL32(19, 21, 28, 255);
         ImU32 accent = IM_COL32(0, 150, 255, 200);
         ImU32 accent_soft = IM_COL32(0, 150, 255, 60);
         ImU32 border = IM_COL32(255, 255, 255, 16);
@@ -320,8 +322,6 @@ namespace menu2 {
                 ImGui::Dummy(ImVec2(6, 6));
                 CustomCheckboxWithBind("Notification", &UI::event_notification, "notif_bind");
                 ImGui::Dummy(ImVec2(6, 6));
-                CustomCheckboxWithBind("No shadow", &UI::no_shadow, "nosh_bind");                
-                ImGui::Dummy(ImVec2(6, 6));
                 CustomCheckboxWithBind(u8"Михаил Сергеевич", &UI::_MISHA, "_MISHA_bind");
 
                 ImGui::Dummy(ImVec2(3, 12));
@@ -349,11 +349,21 @@ namespace menu2 {
             }
             else if (selected_tab == 1) {
                 ImGui::Dummy(ImVec2(6, 6));
-                CustomCheckboxWithBind("ESP", &UI::esp, "esp_bind");
+                CustomCheckboxWithBind("ESP tracer", &UI::esp, "esp_bind");
+                ImGui::Dummy(ImVec2(6, 6));
+                CustomCheckboxWithBind("ESP box", &UI::esp_box, "esp_box_bind");
+                ImGui::Dummy(ImVec2(6, 6));
+                CustomCheckboxWithBind("ESP dist", &UI::esp_dist, "esp_dist_bind");
+                ImGui::Dummy(ImVec2(6, 6));
+                CustomCheckboxWithBind("Trail", &UI::trail, "trail_bind");
+                ImGui::Dummy(ImVec2(6, 6));
+                CustomCheckboxWithBind("RGB trail", &UI::trail_rgb, "trailrgb_vis");
                 ImGui::Dummy(ImVec2(6, 6));
                 CustomCheckboxWithBind("Rolehack", &UI::rolehack, "role_bind");
                 ImGui::Dummy(ImVec2(6, 6));
                 CustomCheckboxWithBind("No shadow", &UI::no_shadow, "nosh_bind_vis");
+                ImGui::Dummy(ImVec2(6, 6));
+                CustomCheckboxWithBind("Unlock all skins", &UI::all_skins, "all_skins_vis");
                 ImGui::Dummy(ImVec2(6, 6));
             }
             else if (selected_tab == 2) {
@@ -469,6 +479,29 @@ namespace menu2 {
             ImGui::End();
             ImGui::PopStyleVar();
             ImGui::PopStyleVar();
+        }
+        inline void WaterMark() {
+            ImGui::GetForegroundDrawList()->AddRectFilled(ImVec2(5, 5), ImVec2(35, 35), theme.water_bg, theme.border);
+            ImGui::GetForegroundDrawList()->AddRect(ImVec2(5, 5), ImVec2(35, 35), theme.water_border, theme.border, 15, 2);
+            ImGui::GetForegroundDrawList()->AddImage((void*)UI::logo, ImVec2(10, 10), ImVec2(30, 30));
+            if (Helper::Methods::IsInGame() || Helper::Methods::IsInLobby()) {
+                if (Helper::Var::IP_server != "") {
+                    Helper::Var::GetIP = false;
+                    ImVec2 text_size = ImGui::GetFont()->CalcTextSizeA(20, FLT_MAX, 0, Helper::Var::IP_server.c_str());
+                    ImGui::GetForegroundDrawList()->AddRectFilled(ImVec2(40, 5), ImVec2(text_size.x + 50, 35), theme.water_bg, theme.border);
+                    ImGui::GetForegroundDrawList()->AddRect(ImVec2(40, 5), ImVec2(text_size.x + 50, 35), theme.water_border, theme.border, 15, 2);
+                    Helper::Methods::AddText(ImGui::GetFont(), 20, false, true, ImVec2(45, 10), ImColor(255, 255, 255), Helper::Var::IP_server.c_str(), ImGui::GetForegroundDrawList());
+                }
+                else {
+                    ImVec2 text_size = ImGui::GetFont()->CalcTextSizeA(20, FLT_MAX, 0, "localhost");
+                    ImGui::GetForegroundDrawList()->AddRectFilled(ImVec2(40, 5), ImVec2(text_size.x + 50, 35), theme.water_bg, theme.border);
+                    ImGui::GetForegroundDrawList()->AddRect(ImVec2(40, 5), ImVec2(text_size.x + 50, 35), theme.water_border, theme.border, 15, 2);
+                    Helper::Methods::AddText(ImGui::GetFont(), 20, false, true, ImVec2(45, 10), ImColor(255, 255, 255), "localhost", ImGui::GetForegroundDrawList());
+                }
+            }
+            else if (Helper::Var::IP_server != "" && !Helper::Var::GetIP) {
+                Helper::Var::IP_server = "";
+            }
         }
     };
 }

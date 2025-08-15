@@ -37,25 +37,33 @@ public:
         float minDist = FLT_MAX;
         unity::vector closestPos = Helper::Var::Position_local;
         uintptr_t closestObj = Helper::Var::LocalPlayer;
-
-        for (auto& info : Helper::Var::NetworkedPlayerInfo_list) {
-            if (!info || !Helper::Var::LocalPlayer || !Helper::Methods::IsNativeObjectAlive(info) || *(bool*)(info + 0x48)) continue;
-
+        std::vector<uintptr_t> copy_NPIl = Helper::Var::NetworkedPlayerInfo_list;
+        for (auto& info : copy_NPIl) {
+            if (!info)
+                continue;
+            if (!Helper::Var::LocalPlayer)
+                continue;
+            if (!Helper::Methods::IsValidPtr(reinterpret_cast<void*>(info)))
+                continue;
+            if (!Helper::Methods::IsValidPtr(reinterpret_cast<void*>(Helper::Var::LocalPlayer)))
+                continue;
+            if (!Helper::Methods::IsValidPtrRegion(reinterpret_cast<void*>(info)))
+                continue;
+            if (!Helper::Methods::IsValidPtrRegion(reinterpret_cast<void*>(Helper::Var::LocalPlayer)))
+                continue;
+            if (!Helper::Methods::IsValidField(info, 0x48, sizeof(bool))) continue;
+            if (*reinterpret_cast<bool*>(info + 0x48)) continue;
+            if (!Helper::Methods::IsValidField(info, 0x54, sizeof(bool))) continue;
+            if (*reinterpret_cast<bool*>(info + 0x48)) continue;
+            if (!Helper::Methods::IsNativeObjectAlive(info))
+                continue;
             auto name_sys = Helper::Methods::get_PlayerName(info);
             std::string playerName = (name_sys && name_sys->fields._stringLength > 0)
                 ? utf16_to_utf8((wchar_t*)&name_sys->fields._firstChar, name_sys->fields._stringLength) : "";
 
-            bool isDead = *(bool*)(info + 0x54);
-            uintptr_t obj = *(uintptr_t*)(info + 0x58);
+            bool isDead = *reinterpret_cast<bool*>(info + 0x54);
+            uintptr_t obj = *reinterpret_cast<uintptr_t*>(info + 0x58);
             if (!obj || !Helper::Methods::IsNativeObjectAlive(obj)) continue;
-
-            if (obj == Helper::Var::LocalPlayer && UI::imp) {
-                *(RoleTypes*)(info + 0x38) = RoleTypes::Engineer;
-                if (auto kal = *(uintptr_t*)(info + 0x4C)) {
-                    *(bool*)(kal + 0x43) = true;
-                    Helper::Methods::RpcSetRole(obj, RoleTypes::Engineer, true);
-                }
-            }
 
             bool previouslyDead = wasDead[playerName];
             if (isDead && !previouslyDead) {
@@ -72,7 +80,7 @@ public:
                 if (nearestImp) {
                     for (auto& other : Helper::Var::NetworkedPlayerInfo_list) {
                         if (!other) continue;
-                        if (*(uintptr_t*)(other + 0x58) == nearestImp) {
+                        if (*reinterpret_cast<uintptr_t*>(other + 0x58) == nearestImp) {
                             auto ksys = Helper::Methods::get_PlayerName(other);
                             if (ksys && ksys->fields._stringLength > 0)
                                 killer = utf16_to_utf8((wchar_t*)&ksys->fields._firstChar, ksys->fields._stringLength);
@@ -112,21 +120,34 @@ public:
             auto start = Helper::Var::OnScreen_local;
             auto end = ImVec2(Helper::Methods::WorldToScreenPoint(Helper::Methods::get_current(), pos).x,
                 screenSize.y - lb_screen.y);
-
-            ImColor col = isImp ? ImColor(255, 0, 0) : ImColor(255, 255, 255);
+            bool inVent = *reinterpret_cast<bool*>(obj + 0x48);
+            ImColor col = inVent ? ImColor(0, 255, 255) : (isImp ? ImColor(255, 0, 0) : ImColor(255, 255, 255));
             ImColor bgCol = isDead ? ImColor(0, 0, 0, 50) : ImColor(0, 0, 0);
             int alpha = isDead ? 50 : 255;
-            ImGui::GetBackgroundDrawList()->AddLine(start, end, ImColor((int)col.Value.x * 255, (int)col.Value.y * 255, (int)col.Value.z * 255, alpha));
-            ImGui::GetBackgroundDrawList()->AddRect(ImVec2(rt_screen.x, screenSize.y - rt_screen.y),
-                ImVec2(lb_screen.x, screenSize.y - lb_screen.y),
-                bgCol, 0, 15, 3);
-            ImGui::GetBackgroundDrawList()->AddRect(ImVec2(rt_screen.x, screenSize.y - rt_screen.y),
-                ImVec2(lb_screen.x, screenSize.y - lb_screen.y),
-                ImColor((int)col.Value.x * 255, (int)col.Value.y * 255, (int)col.Value.z * 255, isDead ? 15 : 255));
-
-            ImVec2 center{ (start.x + end.x) * 0.5f, (start.y + end.y) * 0.5f };
-            char dist_str[32]; std::snprintf(dist_str, sizeof(dist_str), "%.2fm", objDist);
-            Helper::Methods::AddText(ImGui::GetFont(), ImGui::GetFontSize(), true, true, center, ImColor(255, 255, 255), dist_str);
+            if (UI::esp && !isDead) {
+                ImGui::GetBackgroundDrawList()->AddLine(start, end, ImColor((int)col.Value.x * 255, (int)col.Value.y * 255, (int)col.Value.z * 255, alpha));
+            }
+            if (UI::esp_box) {
+                ImGui::GetBackgroundDrawList()->AddRect(ImVec2(rt_screen.x, screenSize.y - rt_screen.y),
+                    ImVec2(lb_screen.x, screenSize.y - lb_screen.y),
+                    bgCol, 0, 15, 3);
+                ImGui::GetBackgroundDrawList()->AddRect(ImVec2(rt_screen.x, screenSize.y - rt_screen.y),
+                    ImVec2(lb_screen.x, screenSize.y - lb_screen.y),
+                    ImColor((int)col.Value.x * 255, (int)col.Value.y * 255, (int)col.Value.z * 255, isDead ? 15 : 255));
+                if (UI::esp_dist) {
+                    ImVec2 flagPos = ImVec2(rt_screen.x, screenSize.y - rt_screen.y); // чуть выше правого верхнего угла
+                    char dist_str[32];
+                    std::snprintf(dist_str, sizeof(dist_str), "%.1fm", objDist);
+                    Helper::Methods::AddText(
+                        ImGui::GetFont(),
+                        ImGui::GetFontSize(),
+                        true, true,
+                        flagPos + ImVec2(4, 0),
+                        ImColor(255, 255, 255),
+                        dist_str
+                    );
+                }
+            }
         }
 
         Helper::Var::closest = closestObj;
